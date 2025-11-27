@@ -1,0 +1,41 @@
+/* style.css */
+:root {
+    --color-primary: #5B21B6; /* Deep Violet/Indigo */
+    --color-secondary: #E0E7FF; /* Light Indigo */
+    --color-text: #1F2937; /* Dark Gray */
+    --color-accent: #7C3AED; /* Medium Violet */
+}
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+/* Custom Utility for the primary button color */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+}
+.btn-primary:hover {
+    background-color: #4C1D95;
+    box-shadow: 0 10px 15px -3px rgba(93, 22, 237, 0.3), 0 4px 6px -2px rgba(93, 22, 237, 0.1);
+}
+.btn-primary:active {
+    transform: translateY(1px);
+}
+.section-padding {
+    padding: 4rem 1rem;
+}
+@media (min-width: 640px) {
+    .section-padding {
+        padding: 6rem 2rem;
+    }
+}
+/* Style the modal to appear from the top for better user experience */
+#modalContent {
+    animation: bounceIn 0.3s ease-out;
+}
+@keyframes bounceIn {
+    0% { transform: scale(0.9) translateY(-50px); opacity: 0; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}

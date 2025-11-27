@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Team - Inclusive Care Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-white">
+
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                    <a href="index.html#home" class="flex items-center space-x-2">
+                        <svg class="h-10 w-10 text-violet-700" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-1.28.31-2.49.86-3.55l7.14 7.14c1.06-.55 2.27-.86 3.55-.86 4.41 0 8 3.59 8 8zm4-12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-8 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM4 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/>
+                            <path fill="#7C3AED" opacity="0.8" d="M12 2a10 10 0 018 4.96A9.957 9.957 0 0112 22a9.96 9.96 0 01-8-4.96A9.956 9.956 0 0112 2z"/>
+                            <path fill="white" d="M15 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+                        </svg>
+                        <span class="text-xl font-extrabold tracking-tight text-violet-700">Inclusive Care Foundation</span>
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html#home" class="nav-link hover:text-violet-700 font-medium text-gray-600 transition">Home</a>
+                    
+                    <div class="relative group">
+                        <a href="index.html#about" class="nav-link text-violet-700 font-medium transition flex items-center" aria-expanded="false">
+                            About Us
+                        </a>
+
+                        <div class="absolute z-10 -ml-4 mt-1 w-48 rounded-xl shadow-xl bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block transition duration-200">
+                            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                <a href="index.html#programs" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Our Programs</a>
+                                <a href="#team" class="block px-4 py-2 text-sm text-violet-700 bg-violet-50" role="menuitem">Meet the Team</a>
+                                <a href="index.html#impact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Impact</a>
+                                <a href="index.html#get-involved" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Get Involved</a>
+                                <a href="index.html#news" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Blogs & News</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="nav-link hover:text-violet-700 font-medium text-gray-600 transition">Contact</a>
+                </nav>
+                
+                <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                    <a href="donate.html" class="btn-primary inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-xl shadow-lg hover:shadow-xl">
+                        <i data-lucide="heart" class="w-4 h-4 mr-2"></i> Donate Now
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-700 hover:text-violet-700 hover:bg-gray-100" onclick="toggleMobileMenu()">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-lucide="menu" class="h-6 w-6" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute top-full w-full bg-white md:hidden transition-all duration-300 ease-in-out max-h-0 overflow-hidden shadow-xl" id="mobile-menu">
+            <div class="pt-2 pb-3 px-4 space-y-2 flex flex-col">
+                <a href="index.html#home" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-violet-50 hover:text-violet-700">Home</a>
+                
+                <button type="button" class="flex justify-between items-center w-full px-3 py-2 rounded-lg text-base font-medium text-violet-700 bg-violet-50" onclick="toggleMobileDropdown()">
+                    About Us
+                    <i data-lucide="chevron-down" class="h-5 w-5 transition-transform" id="mobile-dropdown-icon"></i>
+                </button>
+
+                <div id="mobile-dropdown-content" class="pl-4 space-y-1 overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                    <a href="index.html#about" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700 font-bold">About Us Overview</a>
+                    <a href="index.html#programs" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Our Programs</a>
+                    <a href="#team" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-violet-700 bg-violet-100">Meet the Team</a>
+                    <a href="index.html#impact" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Impact</a>
+                    <a href="index.html#get-involved" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Get Involved</a>
+                    <a href="index.html#news" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Blogs & News</a>
+                </div>
+
+                <a href="contact.html" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-violet-50 hover:text-violet-700">Contact</a>
+                
+                <a href="donate.html" onclick="closeMobileMenu();" class="btn-primary w-full mt-4 flex items-center justify-center px-4 py-3 text-base font-medium rounded-xl shadow-lg">
+                    <i data-lucide="heart" class="w-5 h-5 mr-2"></i> Donate Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto">
+        <section id="team" class="section-padding pt-24">
+            <h1 class="text-5xl font-extrabold text-center text-gray-900 mb-4">Meet Our Dedicated Team</h1>
+            <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                Our team is united by a shared commitment to equity, inclusion, and community transformation[cite: 34]. Each member brings unique expertise and passion to our mission[cite: 35].
+            </p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="text-center bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-violet-500 hover:shadow-2xl transition duration-300">
+                    <div class="h-40 w-40 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden border-4 border-white shadow-md flex items-center justify-center">
+                        <i data-lucide="user-check" class="w-12 h-12 text-gray-500"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-violet-700 mb-1">Divine Elikplim Wunu</h2>
+                    <p class="font-semibold text-gray-800 mb-3">Executive Director [cite: 36]</p>
+                    <p class="text-sm text-gray-600">
+                        A professional teacher and certified Community-Based Rehabilitation (CBR) Specialist[cite: 37]. Divine leads the strategic vision and advocates for inclusive policies[cite: 37, 38].
+                    </p>
+                </div>
+
+                <div class="text-center bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-violet-500 hover:shadow-2xl transition duration-300">
+                    <div class="h-40 w-40 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden border-4 border-white shadow-md flex items-center justify-center">
+                        <i data-lucide="settings" class="w-12 h-12 text-gray-500"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-violet-700 mb-1">Albert Worlanyo Atidakpo</h2>
+                    <p class="font-semibold text-gray-800 mb-3">Director of Operations [cite: 39]</p>
+                    <p class="text-sm text-gray-600">
+                        A trained CBR Officer who oversees program implementation and ensures projects are community-driven and sustainable[cite: 40, 41].
+                    </p>
+                </div>
+                
+                <div class="text-center bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-violet-500 hover:shadow-2xl transition duration-300">
+                    <div class="h-40 w-40 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden border-4 border-white shadow-md flex items-center justify-center">
+                        <i data-lucide="piggy-bank" class="w-12 h-12 text-gray-500"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-violet-700 mb-1">Rejoice Gblorkpor</h2>
+                    <p class="font-semibold text-gray-800 mb-3">Finance Officer [cite: 42]</p>
+                    <p class="text-sm text-gray-600">
+                        Manages financial planning and ensures transparency and accountability in all fiscal operations[cite: 43, 44].
+                    </p>
+                </div>
+
+                <div class="text-center bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-violet-500 hover:shadow-2xl transition duration-300">
+                    <div class="h-40 w-40 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden border-4 border-white shadow-md flex items-center justify-center">
+                        <i data-lucide="heart" class="w-12 h-12 text-gray-500"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-violet-700 mb-1">Phidelia Ametame</h2>
+                    <p class="font-semibold text-gray-800 mb-3">Director of Fundraising [cite: 53]</p>
+                    <p class="text-sm text-gray-600">
+                        A certified CBR Officer who leads fundraising strategies to secure support for inclusive development programs[cite: 54, 55].
+                    </p>
+                </div>
+
+                <div class="text-center bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-violet-500 hover:shadow-2xl transition duration-300">
+                    <div class="h-40 w-40 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden border-4 border-white shadow-md flex items-center justify-center">
+                        <i data-lucide="clipboard-list" class="w-12 h-12 text-gray-500"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-violet-700 mb-1">Elkanah Sitsofe Dogbey</h2>
+                    <p class="font-semibold text-gray-800 mb-3">Project Officer [cite: 45]</p>
+                    <p class="text-sm text-gray-600">
+                        Coordinates field projects and community engagements to ensure programs are responsive to local needs and deliver measurable impact[cite: 47, 48].
+                    </p>
+                </div>
+
+                <div class="text-center bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-violet-500 hover:shadow-2xl transition duration-300">
+                    <div class="h-40 w-40 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden border-4 border-white shadow-md flex items-center justify-center">
+                        <i data-lucide="megaphone" class="w-12 h-12 text-gray-500"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-violet-700 mb-1">Pius Kwabena Afrim</h2>
+                    <p class="font-semibold text-gray-800 mb-3">Public Relations Officer (P.R.O) [cite: 49]</p>
+                    <p class="text-sm text-gray-600">
+                        Leads communications and public engagement to amplify the Foundation's message and foster trust[cite: 51, 52].
+                    </p>
+                </div>
+
+                <div class="text-center bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-violet-500 hover:shadow-2xl transition duration-300">
+                    <div class="h-40 w-40 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden border-4 border-white shadow-md flex items-center justify-center">
+                        <i data-lucide="graduation-cap" class="w-12 h-12 text-gray-500"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-violet-700 mb-1">Rev. Binda Kwesi Danku</h2>
+                    <p class="font-semibold text-gray-800 mb-3">Patron [cite: 56]</p>
+                    <p class="text-sm text-gray-600">
+                        An ordained minister and professional teacher who serves as the spiritual and moral guide of the Foundation[cite: 58, 59].
+                    </p>
+                </div>
+
+            </div>
+            
+            <div class="mt-16 text-center bg-violet-50 p-8 rounded-xl max-w-2xl mx-auto shadow-inner">
+                 <p class="text-xl font-bold text-gray-800 mb-4">Interested in Partnering with Our Team?</p>
+                 <a href="contact.html" class="btn-primary inline-flex items-center px-8 py-3 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition">
+                    Get in Touch <i data-lucide="mail" class="w-5 h-5 ml-2"></i>
+                 </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xl font-semibold text-violet-300 mb-2">Inclusive Care Foundation</p>
+            <p class="text-sm text-gray-400">&copy; 2025 Inclusive Care Foundation. All Rights Reserved.</p>
+            <p class="text-xs text-gray-500 mt-1">Duly registered non-profit organization in Ghana, headquartered in Peki, Volta Region.</p>
+            <div class="mt-4 flex justify-center space-x-6 text-sm">
+                <a href="#" class="text-gray-400 hover:text-violet-300 transition">Privacy Policy (Placeholder)</a>
+                <a href="#" class="text-gray-400 hover:text-violet-300 transition">SDG Alignment</a>
+                <a href="#" class="text-gray-400 hover:text-violet-300 transition">CBR Framework</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="messageModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center z-[999]">
+        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full transform opacity-0" id="modalContent">
+            <h3 class="text-2xl font-bold text-violet-700 mb-4" id="modalTitle"></h3>
+            <p class="text-gray-700 mb-6" id="modalBody"></p>
+            <button class="btn-primary w-full px-4 py-2 rounded-xl" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+</body>
+</html>

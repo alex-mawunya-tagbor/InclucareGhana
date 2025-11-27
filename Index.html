@@ -1,23 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inclucare Ghana</title>
-</head>
-<body>
-    <header>
+    <title>Inclusive Care Foundation - Empowering Every Voice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-white">
+
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                    <a href="#home" class="flex items-center space-x-2">
+                        <svg class="h-10 w-10 text-violet-700" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-1.28.31-2.49.86-3.55l7.14 7.14c1.06-.55 2.27-.86 3.55-.86 4.41 0 8 3.59 8 8zm4-12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-8 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM4 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/>
+                            <path fill="#7C3AED" opacity="0.8" d="M12 2a10 10 0 018 4.96A9.957 9.957 0 0112 22a9.96 9.96 0 01-8-4.96A9.956 9.956 0 0112 2z"/>
+                            <path fill="white" d="M15 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+                        </svg>
+                        <span class="text-xl font-extrabold tracking-tight text-violet-700">Inclusive Care Foundation</span>
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link hover:text-violet-700 font-medium text-gray-600 transition">Home</a>
+                    
+                    <div class="relative group">
+                        <a href="#about" class="nav-link hover:text-violet-700 font-medium text-gray-600 transition flex items-center" aria-expanded="false">
+                            About Us
+                        </a>
+
+                        <div class="absolute z-10 -ml-4 mt-1 w-48 rounded-xl shadow-xl bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block transition duration-200">
+                            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                <a href="#programs" onclick="closeMobileMenu()" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Our Programs</a>
+                                <a href="team.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Meet the Team</a>
+                                <a href="#impact" onclick="closeMobileMenu()" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Impact</a>
+                                <a href="get-involved.html#volunteer" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Get Involved</a>
+                                <a href="#news" onclick="closeMobileMenu()" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Blogs & News</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="nav-link hover:text-violet-700 font-medium text-gray-600 transition">Contact</a>
+                </nav>
+                
+                <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                    <a href="get-involved.html#donate" class="btn-primary inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-xl shadow-lg hover:shadow-xl">
+                        <i data-lucide="heart" class="w-4 h-4 mr-2"></i> Donate Now
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-700 hover:text-violet-700 hover:bg-gray-100" onclick="toggleMobileMenu()">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-lucide="menu" class="h-6 w-6" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute top-full w-full bg-white md:hidden transition-all duration-300 ease-in-out max-h-0 overflow-hidden shadow-xl" id="mobile-menu">
+            <div class="pt-2 pb-3 px-4 space-y-2 flex flex-col">
+                <a href="#home" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-violet-50 hover:text-violet-700">Home</a>
+                
+                <button type="button" class="flex justify-between items-center w-full px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-violet-50 hover:text-violet-700" onclick="toggleMobileDropdown()">
+                    About Us
+                    <i data-lucide="chevron-down" class="h-5 w-5 transition-transform" id="mobile-dropdown-icon"></i>
+                </button>
+
+                <div id="mobile-dropdown-content" class="pl-4 space-y-1 overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                    <a href="#about" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700 font-bold">About Us Overview</a>
+                    <a href="#programs" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Our Programs</a>
+                    <a href="team.html" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Meet the Team</a>
+                    <a href="get-involved.html#volunteer" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Get Involved</a>
+                    <a href="#impact" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Impact</a>
+                    <a href="#news" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Blogs & News</a>
+                </div>
+
+                <a href="contact.html" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-violet-50 hover:text-violet-700">Contact</a>
+                
+                <a href="get-involved.html#donate" onclick="closeMobileMenu();" class="btn-primary w-full mt-4 flex items-center justify-center px-4 py-3 text-base font-medium rounded-xl shadow-lg">
+                    <i data-lucide="heart" class="w-5 h-5 mr-2"></i> Donate Now
+                </a>
+            </div>
+        </div>
     </header>
 
+    <main class="max-w-7xl mx-auto">
 
-    <main>
+        <section id="home" class="section-padding pt-24 bg-violet-50 rounded-b-3xl flex items-center justify-center">
+            <div class="text-center max-w-5xl">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                    <span class="text-violet-700">Empowering Every Voice.</span> Building Inclusive Futures.
+                </h1>
+                <p class="mt-6 text-xl text-gray-600 max-w-4xl mx-auto">
+                    The Inclusive Care Foundation is dedicated to combating social exclusion, inequality, and discrimination against marginalized groups in Ghana, including **persons with disabilities, the elderly, and children**. We utilize the Community-Based Rehabilitation (CBR) Matrix to advance inclusive development.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="get-involved.html#volunteer" class="btn-primary px-8 py-4 text-lg font-semibold rounded-xl shadow-2xl flex items-center justify-center">
+                        <i data-lucide="hand-heart" class="w-5 h-5 mr-2"></i> Become a Volunteer
+                    </a>
+                    <a href="get-involved.html#donate" class="bg-white border border-violet-700 text-violet-700 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:bg-violet-50 transition flex items-center justify-center">
+                        <i data-lucide="heart" class="w-5 h-5 mr-2"></i> Donate Now
+                    </a>
+                    <button onclick="scrollToSection('programs')" class="btn-primary px-8 py-4 text-lg font-semibold rounded-xl shadow-2xl flex items-center justify-center">
+                        <i data-lucide="book-open" class="w-5 h-5 mr-2"></i> Explore Our Programs
+                    </button>
+                </div>
+            </div>
+        </section>
 
-    </main>
+        <section id="about" class="section-padding">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-extrabold text-violet-700 mb-6 border-b-4 border-violet-200 pb-2 text-center">Our Foundation</h2>
+                
+                <h3 class="text-2xl font-bold text-gray-800 mt-6 mb-4">Mission & Vision</h3>
+                <p class="text-lg text-gray-600 mb-4">
+                    **Vision:** An all-time available consultancy for community-based rehabilitation services and community development programs.
+                </p>
+                <p class="text-lg text-gray-600 mb-6">
+                    **Mission:** To advance inclusive development in Ghana, through advocacy, rehabilitation, education, and social/public consultations.
+                </p>
 
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 mt-8">Core Values</h3>
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <span class="bg-violet-100 text-violet-700 font-semibold px-4 py-2 rounded-full shadow-md transition hover:bg-violet-200">Diversity</span>
+                    <span class="bg-violet-100 text-violet-700 font-semibold px-4 py-2 rounded-full shadow-md transition hover:bg-violet-200">Integrity</span>
+                    <span class="bg-violet-100 text-violet-700 font-semibold px-4 py-2 rounded-full shadow-md transition hover:bg-violet-200">Teamwork</span>
+                    <span class="bg-violet-100 text-violet-700 font-semibold px-4 py-2 rounded-full shadow-md transition hover:bg-violet-200">Inclusiveness</span>
+                    <span class="bg-violet-100 text-violet-700 font-semibold px-4 py-2 rounded-full shadow-md transition hover:bg-violet-200">Equity</span>
+                </div>
 
-    <footer>
-        <p>&copy; 2024 Inclucare Ghana. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+                <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Background</h3>
+                <p class="text-gray-700">
+                    Established in **March 2025** and headquartered in **Peki, Volta Region, Ghana**, the Inclusive Care Foundation is a duly registered non-profit. Our primary aim is to be a voice for the oppressed and advocate for their rights, aligning our efforts with **Sustainable Development Goals** and utilizing the **Community-Based Rehabilitation (CBR) Matrix** as our framework.
+                </p>
+
+                <div class="mt-10 text-center">
+                    <a href="team.html" class="btn-primary inline-flex items-center px-8 py-3 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition">
+                        Meet Our Dedicated Team <i data-lucide="users-2" class="w-5 h-5 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="programs" class="section-padding bg-gray-50 rounded-3xl">
+            <h2 class="text-4xl font-extrabold text-center text-violet-700 mb-12">Our Programs: The CBR Matrix in Action</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-violet-500">
+                    <i data-lucide="building-2" class="w-8 h-8 text-violet-600 mb-3"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Policy & State Agency Guidance</h3>
+                    <p class="text-gray-600">Organizing and advancing policy guidance to state and non-state agencies concerning the marginalized, especially persons with disabilities, children, and the aged.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-violet-500">
+                    <i data-lucide="megaphone" class="w-8 h-8 text-violet-600 mb-3"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Inclusion Advocacy & Education</h3>
+                    <p class="text-gray-600">Promoting disability and mental health inclusion through policy advocacy, public education, and comprehensive awareness creation.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-violet-500">
+                    <i data-lucide="user-check" class="w-8 h-8 text-violet-600 mb-3"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Rights Capacitation</h3>
+                    <p class="text-gray-600">Capacitating people with disabilities, children, the aged, and their families to understand, demand, and secure their fundamental rights.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-violet-500">
+                    <i data-lucide="handshake" class="w-8 h-8 text-violet-600 mb-3"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Rural Social Intervention</h3>
+                    <p class="text-gray-600">Developing and implementing targeted social intervention projects in vulnerable rural communities to address immediate needs.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-violet-500

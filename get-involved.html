@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved: Donate or Volunteer - Inclusive Care Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-gray-50">
+
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                    <a href="index.html#home" class="flex items-center space-x-2">
+                        <svg class="h-10 w-10 text-violet-700" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-1.28.31-2.49.86-3.55l7.14 7.14c1.06-.55 2.27-.86 3.55-.86 4.41 0 8 3.59 8 8zm4-12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-8 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM4 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/>
+                            <path fill="#7C3AED" opacity="0.8" d="M12 2a10 10 0 018 4.96A9.957 9.957 0 0112 22a9.96 9.96 0 01-8-4.96A9.956 9.956 0 0112 2z"/>
+                            <path fill="white" d="M15 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+                        </svg>
+                        <span class="text-xl font-extrabold tracking-tight text-violet-700">Inclusive Care Foundation</span>
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html#home" class="nav-link hover:text-violet-700 font-medium text-gray-600 transition">Home</a>
+                    
+                    <div class="relative group">
+                        <a href="index.html#about" class="nav-link hover:text-violet-700 font-medium text-gray-600 transition flex items-center" aria-expanded="false">
+                            About Us
+                        </a>
+
+                        <div class="absolute z-10 -ml-4 mt-1 w-48 rounded-xl shadow-xl bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block transition duration-200">
+                            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                <a href="index.html#programs" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Our Programs</a>
+                                <a href="team.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Meet the Team</a>
+                                <a href="index.html#impact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Impact</a>
+                                <a href="index.html#get-involved" class="block px-4 py-2 text-sm text-violet-700 bg-violet-50" role="menuitem">Get Involved</a>
+                                <a href="index.html#news" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Blogs & News</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="nav-link hover:text-violet-700 font-medium text-gray-600 transition">Contact</a>
+                </nav>
+                
+                <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                    <a href="#donate" class="btn-primary inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-xl shadow-lg hover:shadow-xl">
+                        <i data-lucide="heart" class="w-4 h-4 mr-2"></i> Donate Now
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-700 hover:text-violet-700 hover:bg-gray-100" onclick="toggleMobileMenu()">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-lucide="menu" class="h-6 w-6" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute top-full w-full bg-white md:hidden transition-all duration-300 ease-in-out max-h-0 overflow-hidden shadow-xl" id="mobile-menu">
+            <div class="pt-2 pb-3 px-4 space-y-2 flex flex-col">
+                <a href="index.html#home" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-violet-50 hover:text-violet-700">Home</a>
+                
+                <button type="button" class="flex justify-between items-center w-full px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-violet-50 hover:text-violet-700" onclick="toggleMobileDropdown()">
+                    About Us
+                    <i data-lucide="chevron-down" class="h-5 w-5 transition-transform" id="mobile-dropdown-icon"></i>
+                </button>
+
+                <div id="mobile-dropdown-content" class="pl-4 space-y-1 overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                    <a href="index.html#about" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700 font-bold">About Us Overview</a>
+                    <a href="index.html#programs" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Our Programs</a>
+                    <a href="team.html" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Meet the Team</a>
+                    <a href="index.html#impact" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Impact</a>
+                    <a href="#volunteer" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-violet-700 bg-violet-100">Get Involved</a>
+                    <a href="index.html#news" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Blogs & News</a>
+                </div>
+
+                <a href="contact.html" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-violet-50 hover:text-violet-700">Contact</a>
+                
+                <a href="#donate" onclick="closeMobileMenu();" class="btn-primary w-full mt-4 flex items-center justify-center px-4 py-3 text-base font-medium rounded-xl shadow-lg">
+                    <i data-lucide="heart" class="w-5 h-5 mr-2"></i> Donate Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+
+        <div class="text-center max-w-4xl mx-auto mb-16">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-violet-700 leading-tight">
+                Be the Change: Get Involved
+            </h1>
+            <p class="mt-4 text-xl text-gray-600">
+                Whether through your time or a financial gift, your support fuels our mission to advance inclusive development in Ghana.
+            </p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <a href="#volunteer" class="bg-violet-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-violet-800 transition flex items-center">
+                    <i data-lucide="users-2" class="w-5 h-5 mr-2"></i> Become a Volunteer
+                </a>
+                <a href="#donate" class="bg-white border-2 border-violet-700 text-violet-700 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-violet-50 transition flex items-center">
+                    <i data-lucide="heart" class="w-5 h-5 mr-2"></i> Make a Donation
+                </a>
+            </div>
+        </div>
+
+
+        <section id="volunteer" class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl mb-16 border-t-8 border-violet-200">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-4xl font-extrabold text-gray-900 mb-4 flex items-center">
+                        <i data-lucide="hand-heart" class="w-8 h-8 text-violet-700 mr-3"></i> Volunteer Your Time
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Join our passionate team and contribute directly to community transformation in the Volta Region and beyond. We welcome expertise in **Community-Based Rehabilitation (CBR)**, **education**, **advocacy**, and **project management**.
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Our Volunteer Roles</h3>
+                    <ul class="space-y-3 text-gray-700 list-disc list-inside">
+                        <li>Field Assistants for local community interventions.</li>
+                        <li>Advocacy and Awareness Campaign Support.</li>
+                        <li>Administrative and Communications Support.</li>
+                        <li>Specialized skills in health, education, or technology.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-violet-50 p-6 rounded-xl shadow-inner">
+                    <form action="#" method="POST" class="space-y-4">
+                        <h3 class="text-2xl font-bold text-violet-700 mb-4">Apply Today</h3>
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-violet-500 focus:ring-violet-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-violet-500 focus:ring-violet-500">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-violet-500 focus:ring-violet-500">
+                        </div>
+                        <div>
+                            <label for="interest" class="block text-sm font-medium text-gray-700">Area of Interest</label>
+                            <select id="interest" name="interest" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-violet-500 focus:ring-violet-500">
+                                <option value="" disabled selected>Select an area</option>
+                                <option>Community-Based Rehabilitation</option>
+                                <option>Education/Training</option>
+                                <option>Advocacy & Awareness</option>
+                                <option>General Support</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Why do you want to volunteer? (Optional)</label>
+                            <textarea id="message" name="message" rows="3" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-violet-500 focus:ring-violet-500"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full py-3 text-lg font-semibold rounded-xl shadow-lg flex items-center justify-center">
+                            Submit Volunteer Application <i data-lucide="send" class="w-4 h-4 ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="donate" class="bg-violet-700 p-8 md:p-12 rounded-3xl shadow-2xl mb-16 text-white border-b-8 border-violet-500">
+            <h2 class="text-4xl font-extrabold text-white mb-4 text-center flex items-center justify-center">
+                <i data-lucide="heart" class="w-8 h-8 text-violet-300 mr-3"></i> Fund Our Mission
+            </h2>
+            <p class="text-xl text-violet-200 text-center max-w-3xl mx-auto mb-10">
+                Your donation directly supports our Community-Based Rehabilitation (CBR) programs, providing inclusive health, education, and livelihood empowerment to the marginalized in Ghana.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-10 items-start">
+                
+                <div class="bg-violet-800 p-6 rounded-xl shadow-inner space-y-4">
+                    <h3 class="text-2xl font-bold text-white mb-4">How Your Gift Helps</h3>
+                    <div class="flex items-start space-x-3">
+                        <i data-lucide="monitor-dot" class="w-6 h-6 text-violet-300 mt-1 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-violet-100">Policy Advocacy</p>
+                            <p class="text-sm text-violet-200">Funds campaigns to promote disability and mental health inclusion at the national level.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i data-lucide="school" class="w-6 h-6 text-violet-300 mt-1 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-violet-100">Inclusive Education</p>
+                            <p class="text-sm text-violet-200">Provides educational support and materials to children with disabilities and their families.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i data-lucide="accessibility" class="w-6 h-6 text-violet-300 mt-1 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-violet-100">Rehabilitation Services</p>
+                            <p class="text-sm text-violet-200">Sustains rehabilitation, support services, and provides essential assistive technology.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-bold text-violet-700 mb-4">Bank/Mobile Money Transfer</h3>
+                    
+                    <p class="text-lg font-semibold mb-2">Support from Ghana (Mobile Money):</p>
+                    <div class="bg-gray-100 p-4 rounded-lg space-y-2">
+                        <p class="flex justify-between">
+                            <span class="font-medium text-gray-600">Mobile Number:</span>
+                            <span class="font-bold text-gray-800">0247835726 / 0207987405</span>
+                        </p>
+                        <p class="flex justify-between">
+                            <span class="font-medium text-gray-600">Account Name:</span>
+                            <span class="font-bold text-gray-800">Inclusive Care Foundation</span>
+                        </p>
+                    </div>
+
+                    <p class="text-lg font-semibold mt-6 mb-2">International Support (Bank Transfer Placeholder):</p>
+                    <div class="bg-gray-100 p-4 rounded-lg space-y-2">
+                        <p class="text-gray-600 italic">
+                            For international bank transfers, please contact us at <a href="mailto:inclusivefoundation.gh@gmail.com" class="text-violet-600 underline hover:text-violet-800">inclusivefoundation.gh@gmail.com</a> for our Swift Code and Bank Details.
+                        </p>
+                    </div>
+
+                    <p class="mt-6 text-sm text-gray-600">
+                        The Inclusive Care Foundation is a duly registered non-profit organization in Ghana. All financial transactions are managed with full transparency by our Finance Officer, Rejoice Gblorkpor.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xl font-semibold text-violet-300 mb-2">Inclusive Care Foundation</p>
+            <p class="text-sm text-gray-400">&copy; 2025 Inclusive Care Foundation. All Rights Reserved.</p>
+            <p class="text-xs text-gray-500 mt-1">Duly registered non-profit organization in Ghana, headquartered in Peki, Volta Region.</p>
+            <div class="mt-4 flex justify-center space-x-6 text-sm">
+                <a href="#" class="text-gray-400 hover:text-violet-300 transition">Privacy Policy (Placeholder)</a>
+                <a href="#" class="text-gray-400 hover:text-violet-300 transition">SDG Alignment</a>
+                <a href="#" class="text-gray-400 hover:text-violet-300 transition">CBR Framework</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="messageModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center z-[999]">
+        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full transform opacity-0" id="modalContent">
+            <h3 class="text-2xl font-bold text-violet-700 mb-4" id="modalTitle"></h3>
+            <p class="text-gray-700 mb-6" id="modalBody"></p>
+            <button class="btn-primary w-full px-4 py-2 rounded-xl" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+</body>
+</html>
