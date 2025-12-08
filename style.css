@@ -26,6 +26,49 @@ body {
 .section-padding {
     padding: 4rem 1rem;
 }
+
+/*
+ * Hero Background Slider CSS 
+ * Cycles through 3 assumed background images 
+ */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Behind content, but above the main background */
+    overflow: hidden;
+}
+
+.hero-slider:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    /* Animation applied here */
+    animation: image-slide 20s infinite ease-in-out; /* 20s total cycle time */
+    filter: brightness(0.6); /* Slightly darken images for text contrast */
+}
+
+/* Define the image cycling animation */
+@keyframes image-slide {
+    /* Use placeholder image paths. Replace these with actual image paths. */
+    0% { background-image: url('images/hero-1.jpg'); opacity: 1; }
+    30% { background-image: url('images/hero-1.jpg'); opacity: 1; } /* Hold image 1 */
+    33% { background-image: url('images/hero-2.jpg'); opacity: 1; }
+    63% { background-image: url('images/hero-2.jpg'); opacity: 1; } /* Hold image 2 */
+    66% { background-image: url('images/hero-3.jpg'); opacity: 1; }
+    97% { background-image: url('images/hero-3.jpg'); opacity: 1; } /* Hold image 3 */
+    100% { background-image: url('images/hero-1.jpg'); opacity: 1; }
+}
+
+
+
 @media (min-width: 640px) {
     .section-padding {
         padding: 6rem 2rem;

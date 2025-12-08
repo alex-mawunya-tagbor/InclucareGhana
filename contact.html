@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Inclusive Care Foundation</title>
+    <title>Inclusive Care Foundation - Contact Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -19,13 +19,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
                 <div class="flex justify-start lg:w-0 lg:flex-1">
-                    <a href="index.html#home" class="flex items-center space-x-2">
-                        <svg class="h-10 w-10 text-violet-700" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-1.28.31-2.49.86-3.55l7.14 7.14c1.06-.55 2.27-.86 3.55-.86 4.41 0 8 3.59 8 8zm4-12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-8 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM4 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/>
-                            <path fill="#7C3AED" opacity="0.8" d="M12 2a10 10 0 018 4.96A9.957 9.957 0 0112 22a9.96 9.96 0 01-8-4.96A9.956 9.956 0 0112 2z"/>
-                            <path fill="white" d="M15 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
-                        </svg>
-                        <span class="text-xl font-extrabold tracking-tight text-violet-700">Inclusive Care Foundation</span>
+                    <a href="index.html#home" class="flex items-center">
+                        <img src="images/InclusiveCare.jpg" alt="Inclusive Care Foundation Logo" class="h-21 w-24 rounded-xl shadow-lg"> 
                     </a>
                 </div>
 
@@ -40,18 +35,19 @@
                         <div class="absolute z-10 -ml-4 mt-1 w-48 rounded-xl shadow-xl bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block transition duration-200">
                             <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                                 <a href="index.html#programs" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Our Programs</a>
-                                <a href="index.html#impact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Impact</a>
-                                <a href="index.html#get-involved" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Get Involved</a>
+                                <a href="team.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Meet the Team</a>
+                                <a href="index.html#impact-news" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Impact & News</a>
+                                <a href="get-involved.html#volunteer" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Get Involved</a>
                                 <a href="index.html#news" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Blogs & News</a>
                             </div>
                         </div>
                     </div>
                     
-                    <a href="#contact" class="nav-link text-violet-700 font-medium transition">Contact</a>
+                    <a href="contact.html" class="nav-link font-extrabold text-violet-700 transition">Contact</a>
                 </nav>
                 
                 <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                    <a href="donate.html" class="btn-primary inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-xl shadow-lg hover:shadow-xl">
+                    <a href="get-involved.html#donate" class="btn-primary inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-xl shadow-lg hover:shadow-xl">
                         <i data-lucide="heart" class="w-4 h-4 mr-2"></i> Donate Now
                     </a>
                 </div>
@@ -64,107 +60,191 @@
                 </div>
             </div>
         </div>
-
         <div class="absolute top-full w-full bg-white md:hidden transition-all duration-300 ease-in-out max-h-0 overflow-hidden shadow-xl" id="mobile-menu">
             <div class="pt-2 pb-3 px-4 space-y-2 flex flex-col">
-                <a href="index.html#home" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-violet-50 hover:text-violet-700">Home</a>
-                
-                <button type="button" class="flex justify-between items-center w-full px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-violet-50 hover:text-violet-700" onclick="toggleMobileDropdown()">
-                    About Us
-                    <i data-lucide="chevron-down" class="h-5 w-5 transition-transform" id="mobile-dropdown-icon"></i>
-                </button>
-
-                <div id="mobile-dropdown-content" class="pl-4 space-y-1 overflow-hidden transition-all duration-300 ease-in-out max-h-0">
-                    <a href="index.html#about" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700 font-bold">About Us Overview</a>
-                    <a href="index.html#programs" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Our Programs</a>
-                    <a href="index.html#impact" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Impact</a>
-                    <a href="index.html#get-involved" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Get Involved</a>
-                    <a href="index.html#news" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Blogs & News</a>
-                </div>
-
-                <a href="#contact" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-violet-700 bg-violet-50">Contact</a>
-                
-                <a href="donate.html" onclick="closeMobileMenu()" class="btn-primary w-full mt-4 flex items-center justify-center px-4 py-3 text-base font-medium rounded-xl shadow-lg">
+                <a href="index.html#home" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-violet-50 hover:text-violet-700">Home</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-lg text-base font-medium text-violet-700 hover:bg-violet-50">Contact</a>
+                <a href="get-involved.html#donate" class="btn-primary w-full mt-4 flex items-center justify-center px-4 py-3 text-base font-medium rounded-xl shadow-lg">
                     <i data-lucide="heart" class="w-5 h-5 mr-2"></i> Donate Now
                 </a>
             </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto">
-        <section id="contact" class="section-padding pt-24">
-            <h1 class="text-5xl font-extrabold text-center text-gray-900 mb-4">Contact Us</h1>
-            <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-12">
-                We're here to answer your questions, discuss partnerships, or hear your story. Reach out to the Inclusive Care Foundation team today.
-            </p>
+    <main class="mx-auto">
 
-            <div class="grid md:grid-cols-2 gap-12">
-                
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
-                    <h2 class="text-3xl font-extrabold text-violet-700 mb-6">Our Details</h2>
-                    <p class="text-gray-700 mb-8">Reach out to our team for partnerships, press inquiries, or to learn more about our projects in the Volta Region.</p>
+        <section class="relative bg-white">
+            <div class="w-full h-80 bg-violet-700"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-48 pb-16 relative z-10">
+                <div class="grid lg:grid-cols-5 gap-8">
                     
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <i data-lucide="map-pin" class="w-6 h-6 text-violet-700 flex-shrink-0 mt-1"></i>
-                            <div>
-                                <h4 class="font-bold text-gray-800">Office Location</h4>
-                                <p class="text-gray-600">Peki, Volta Region, Ghana</p>
-                            </div>
-                        </div>
+                    <div class="lg:col-span-2 text-white pt-8 pb-16 lg:pb-24 pr-8 self-end">
+                        <h1 class="text-5xl font-extrabold mb-4">Contact Us</h1>
+                        <p class="text-xl max-w-xl">
+                            Have questions or enquiries? Our primary mission is to combat social exclusion, inequality, and discrimination against marginalized groups. You may reach us via the contact details or complete the enquiry form below.
+                        </p>
+                    </div>
 
-                        <div class="flex items-start space-x-4">
-                            <i data-lucide="phone" class="w-6 h-6 text-violet-700 flex-shrink-0 mt-1"></i>
-                            <div>
-                                <h4 class="font-bold text-gray-800">Call Us</h4>
-                                <p class="text-gray-600">0247835726 / 0207987405</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <i data-lucide="mail" class="w-6 h-6 text-violet-700 flex-shrink-0 mt-1"></i>
-                            <div>
-                                <h4 class="font-bold text-gray-800">Email Address</h4>
-                                <a href="mailto:inclusivefoundation.gh@gmail.com" class="text-violet-700 hover:text-violet-900 transition">inclusivefoundation.gh@gmail.com</a>
+                    <div class="lg:col-span-3 bg-white p-6 rounded-xl shadow-2xl border-t-4 border-violet-700 self-start pt-10 lg:pt-0">
+                        <h3 class="text-xl font-extrabold text-violet-700 mb-4">CONTACT DETAILS</h3>
+                        
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-start">
+                                <i data-lucide="map-pin" class="w-5 h-5 mr-3 mt-1 text-violet-600 flex-shrink-0"></i>
+                                <span>Headquarters: Peki, Volta Region, Ghana</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="compass" class="w-5 h-5 mr-3 mt-1 text-violet-600 flex-shrink-0"></i>
+                                <span>Digital Address: VQ-0000-0000 (Peki)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="phone" class="w-5 h-5 mr-3 mt-1 text-violet-600 flex-shrink-0"></i>
+                                <span>0247835726 / 0207987405</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="mail" class="w-5 h-5 mr-3 mt-1 text-violet-600 flex-shrink-0"></i>
+                                <a href="mailto:inclusivefoundation.gh@gmail.com" class="hover:text-violet-700">inclusivefoundation.gh@gmail.com</a>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="calendar-check" class="w-5 h-5 mr-3 mt-1 text-violet-600 flex-shrink-0"></i>
+                                <span>Established: March, 2025</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-6 pt-4 border-t border-violet-200">
+                            <h4 class="text-lg font-bold text-violet-700 mb-3">Connect With Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" title="Facebook" class="text-violet-600 hover:text-violet-800 transition"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                                <a href="#" title="Twitter" class="text-violet-600 hover:text-violet-800 transition"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                                <a href="#" title="Instagram" class="text-violet-600 hover:text-violet-800 transition"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                                <a href="#" title="LinkedIn" class="text-violet-600 hover:text-violet-800 transition"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div>
-                    <h2 class="text-3xl font-extrabold text-gray-800 mb-6">Send an Inquiry</h2>
-                    <form onsubmit="handleContactForm(event)" class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-gray-700 font-medium mb-1">Full Name</label>
-                            <input type="text" id="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-violet-500 focus:border-violet-500 transition shadow-sm">
+        <section id="contact-form-map" class="pt-8 pb-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-5 gap-12">
+                    
+                    <div class="lg:col-span-2">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Enquiry Form</h2>
+                        <form action="#" method="POST" class="space-y-6">
+                            
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <input type="text" name="name" id="name" required
+                                    class="mt-1 block w-full border-gray-300 rounded-xl shadow-sm focus:border-violet-500 focus:ring-violet-500 p-3 border">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <input type="email" name="email" id="email" required
+                                    class="mt-1 block w-full border-gray-300 rounded-xl shadow-sm focus:border-violet-500 focus:ring-violet-500 p-3 border">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                <textarea name="message" id="message" rows="5" required
+                                    class="mt-1 block w-full border-gray-300 rounded-xl shadow-sm focus:border-violet-500 focus:ring-violet-500 p-3 border"></textarea>
+                            </div>
+                            
+                            <div>
+                                <button type="submit" class="btn-primary flex items-center justify-center px-6 py-3 text-lg rounded-xl shadow-lg hover:shadow-xl">
+                                    Send Message <i data-lucide="send" class="w-5 h-5 ml-2"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="lg:col-span-3 pt-8 lg:pt-0">
+                        <div class="rounded-xl shadow-xl overflow-hidden h-64 border border-gray-300">
+                            <h3 class="p-3 bg-gray-100 text-gray-700 font-bold">Find Us on the Map</h3>
+                            <div class="w-full h-full bg-gray-200 flex items-center justify-center text-center text-gray-500 text-sm">
+                                Placeholder for Interactive Map of Peki, Volta Region, Ghana.
+                            </div>
                         </div>
-                        <div>
-                            <label for="email" class="block text-gray-700 font-medium mb-1">Email Address</label>
-                            <input type="email" id="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-violet-500 focus:border-violet-500 transition shadow-sm">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-700 font-medium mb-1">Message / Inquiry Details</label>
-                            <textarea id="message" rows="5" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-violet-500 focus:border-violet-500 transition shadow-sm"></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary w-full px-6 py-3 font-semibold rounded-xl text-lg shadow-md">
-                            Submit Inquiry
-                        </button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <footer class="bg-gray-900 text-white py-8 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-xl font-semibold text-violet-300 mb-2">Inclusive Care Foundation</p>
-            <p class="text-sm text-gray-400">&copy; 2025 Inclusive Care Foundation. All Rights Reserved.</p>
-            <p class="text-xs text-gray-500 mt-1">Duly registered non-profit organization in Ghana, headquartered in Peki, Volta Region.</p>
-            <div class="mt-4 flex justify-center space-x-6 text-sm">
-                <a href="#" class="text-gray-400 hover:text-violet-300 transition">Privacy Policy (Placeholder)</a>
-                <a href="#" class="text-gray-400 hover:text-violet-300 transition">SDG Alignment</a>
-                <a href="#" class="text-gray-400 hover:text-violet-300 transition">CBR Framework</a>
+    <footer class="bg-gray-100 py-16 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700">
+            
+            <div class="grid md:grid-cols-4 gap-12 border-b border-gray-300 pb-12">
+
+                <div>
+                    <h4 class="text-lg font-extrabold text-violet-700 mb-4">About Us</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#about" class="hover:text-violet-700 transition">Who We Are</a></li>
+                        <li><a href="team.html" class="hover:text-violet-700 transition">Meet Our Team</a></li>
+                        <li><a href="index.html#about" class="hover:text-violet-700 transition">Core Values</a></li>
+                        <li><a href="get-involved.html" class="hover:text-violet-700 transition">Get Involved</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-extrabold text-violet-700 mb-4">Our Work & Resources</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#programs" class="hover:text-violet-700 transition">Our Programs (CBR Matrix)</a></li>
+                        <li><a href="#" onclick="showPlaceholderModal('research')" class="hover:text-violet-700 transition">Disability Research</a></li>
+                        <li><a href="#" onclick="showPlaceholderModal('publications')" class="hover:text-violet-700 transition">Publications</a></li>
+                        <li><a href="index.html#impact-news" class="hover:text-violet-700 transition">Blogs & News</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-extrabold text-violet-700 mb-4">Contact Us</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <i data-lucide="mail" class="w-4 h-4 mr-2 mt-1 text-gray-500 flex-shrink-0"></i>
+                            <a href="mailto:inclusivefoundation.gh@gmail.com" class="hover:text-violet-700 transition">inclusivefoundation.gh@gmail.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="phone" class="w-4 h-4 mr-2 mt-1 text-gray-500 flex-shrink-0"></i>
+                            <span>0247835726 / 0207987405</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-1 text-gray-500 flex-shrink-0"></i>
+                            <span>Headquarters: Peki, Volta Region, Ghana</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="compass" class="w-4 h-4 mr-2 mt-1 text-gray-500 flex-shrink-0"></i>
+                            <span>Digital Address: VQ-0000-0000 (Peki)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-extrabold text-violet-700 mb-4">Connect With Us</h4>
+                    
+                    <div class="flex space-x-3 mb-6">
+                        <a href="#" title="Facebook" class="text-gray-500 hover:text-blue-600 transition"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                        <a href="#" title="Twitter" class="text-gray-500 hover:text-blue-400 transition"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                        <a href="#" title="Instagram" class="text-gray-500 hover:text-pink-600 transition"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                        <a href="#" title="LinkedIn" class="text-gray-500 hover:text-blue-700 transition"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                    </div>
+                    
+                    <a href="get-involved.html#donate" class="btn-primary inline-flex items-center px-6 py-3 text-sm font-semibold rounded-xl shadow-lg hover:shadow-xl w-full justify-center">
+                         <i data-lucide="heart" class="w-4 h-4 mr-2"></i> Donate Now
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2">Support our fight against social exclusion.</p>
+                </div>
+
             </div>
+
+            <div class="mt-8 text-center text-sm text-gray-600">
+                <p>&copy; 2025 Inclusive Care Foundation. All Rights Reserved. Duly registered in Ghana.</p>
+                <div class="mt-2 flex justify-center space-x-4 text-xs">
+                    </div>
+            </div>
+
         </div>
     </footer>
 
