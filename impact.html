@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacts & Updates - Inclusive Care Foundation</title>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="impact.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="images/InclusiveCare.jpg" alt="Inclusive Care Foundation Logo" class="logo"> 
+                </a>
+            </div>
+
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-trigger">About Us <i data-lucide="chevron-down" class="icon-sm"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html#about">Who We Are</a>
+                        <a href="programs.html">Our Programs</a>
+                        <a href="team.html">Meet the Team</a>
+                        <a href="impact.html">Impacts & updates</a>
+                        <a href="get-involved.html">Get Involved</a>
+                        <a href="news.html">Blogs & News</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-action">
+                <a href="get-involved.html#donate" class="btn btn-primary">
+                    <i data-lucide="heart"></i> Donate Now
+                </a>
+            </div>
+
+            <div class="mobile-toggle">
+                <button onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="index.html" onclick="closeMobileMenu()">Home</a>
+            <button class="mobile-dropdown-btn" onclick="toggleMobileDropdown()">
+                About Us <i data-lucide="chevron-down" id="mobile-dropdown-icon"></i>
+            </button>
+            <div id="mobile-dropdown-content" class="mobile-sub-menu">
+                <a href="index.html#about" onclick="closeMobileMenu()">Who We Are</a>
+                <a href="programs.html" onclick="closeMobileMenu()">Our Programs</a>
+                <a href="team.html" onclick="closeMobileMenu()">Meet the Team</a>
+                <a href="get-involved.html" onclick="closeMobileMenu()">Get Involved</a>
+            </div>
+            <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+            <a href="get-involved.html#donate" class="btn btn-primary mobile-donate-btn" onclick="closeMobileMenu()">
+                <i data-lucide="heart"></i> Donate Now
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="impact-hero">
+            <div class="container hero-inner">
+                <div class="hero-card">
+                    <span class="hero-tag">OUR PROGRESS</span>
+                    <div class="hero-card-content">
+                        <h1>Impacts & <span class="text-gradient">Updates.</span></h1>
+                        <p>Transparency is our core value. See how your contributions are being transformed into skills, livelihoods, and dignity for PWDs across Ghana.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title-premium">Project Updates</h2>
+                <div class="update-card-featured">
+                    <div class="update-images">
+                        <img src="images/update-1.jpg" alt="Update 1" class="featured-update-img">
+                        <img src="images/update-2.jpg" alt="Update 2" class="sub-update-img">
+                    </div>
+                    <div class="update-info">
+                        <h3>Unleash Potential, Empower Lives</h3>
+                        <p class="update-meta"><i data-lucide="map-pin"></i> South Dayi District (Peki, Kpalime, Todome, Kpeve)</p>
+                        <p>Breaking barriers for 100 Persons with Disabilities through intensive skills training in liquid soap making and skin care production.</p>
+                        
+                        <div class="momo-highlight-box">
+                            <p><strong>Be part of this movement:</strong></p>
+                            <p class="momo-num">054 515 8517</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title-premium text-center">Impact Evidence</h2>
+                <div class="impact-masonry">
+                    <div class="impact-card">
+                        <img src="images/impact-1.jpg" alt="Impact 1">
+                        <div class="impact-content">
+                            <h4>Vocational Success</h4>
+                            <p>Participants showing their finished liquid soap products, ready for local distribution.</p>
+                        </div>
+                    </div>
+                    <div class="impact-card">
+                        <img src="images/impact-2.jpg" alt="Impact 2">
+                        <div class="impact-content">
+                            <h4>Community Skills</h4>
+                            <p>Hands-on training sessions fostering independence and community bond among PWDs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="index.html#about">Who We Are</a></li>
+                    <li><a href="team.html">Meet Our Team</a></li>
+                    <li><a href="get-involved.html">Get Involved</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Work & Resources</h4>
+                <ul>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="impact.html">Impact & Updates</a></li>
+                    <li><a href="#" onclick="showPlaceholderModal('research')">Research</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i data-lucide="mail"></i> inclusivefoundation.gh@gmail.com</li>
+                    <li><i data-lucide="phone"></i> 024 783 5726 / 054 515 8517</li>
+                    <li><i data-lucide="map-pin"></i> Peki, Volta Region, Ghana</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#"><i data-lucide="facebook"></i></a>
+                    <a href="#"><i data-lucide="twitter"></i></a>
+                    <a href="#"><i data-lucide="instagram"></i></a>
+                </div>
+                <a href="get-involved.html#donate" class="btn btn-primary full-width" style="margin-top: 20px;">Donate Now</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Inclusive Care Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
