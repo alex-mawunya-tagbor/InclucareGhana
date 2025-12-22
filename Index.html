@@ -1,376 +1,307 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inclusive Care Foundation - Empowering Every Voice</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
     
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
-<body class="bg-white">
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="images/InclusiveCare.jpg" alt="Inclusive Care Foundation Logo" class="logo"> 
+                </a>
+            </div>
 
-    <header class="sticky top-0 z-50 bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
-                <div class="flex justify-start lg:w-0 lg:flex-1">
-                    <a href="#home" class="flex items-center">
-                        <img src="images/InclusiveCare.jpg" alt="Inclusive Care Foundation Logo" class="h-21 w-24 rounded-xl shadow-lg"> 
-                    </a>
-                </div>
-
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link hover:text-violet-700 font-medium text-gray-600 transition">Home</a>
-                    
-                    <div class="relative group">
-                        <a href="#about" class="nav-link hover:text-violet-700 font-medium text-gray-600 transition flex items-center" aria-expanded="false">
-                            About Us
-                        </a>
-
-                        <div class="absolute z-10 -ml-4 mt-1 w-48 rounded-xl shadow-xl bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block transition duration-200">
-                            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                                <a href="#about" onclick="closeMobileMenu()" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Who We Are</a> 
-                                
-                                <a href="#programs" onclick="closeMobileMenu()" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Our Programs</a>
-                                <a href="team.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Meet the Team</a>
-                                <a href="#impact-news" onclick="closeMobileMenu()" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Impact & News</a>
-                                <a href="get-involved.html#volunteer" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Get Involved</a>
-                                <a href="#news" onclick="closeMobileMenu()" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-700" role="menuitem">Blogs & News</a>
-                            </div>
-                        </div>
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="#about" class="nav-link dropdown-trigger">About Us <i data-lucide="chevron-down" class="icon-sm"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#about">Who We Are</a>
+                        <a href="programs.html">Our Programs</a>
+                        <a href="team.html">Meet the Team</a>
+                        <a href="#impact-news">Impact & News</a>
+                        <a href="get-involved.html">Get Involved</a>
+                        <a href="news.html">Blogs & News</a>
                     </div>
-                    
-                    <a href="contact.html" class="nav-link hover:text-violet-700 font-medium text-gray-600 transition">Contact</a>
-                </nav>
-                
-                <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                    <a href="get-involved.html#donate" class="btn-primary inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-xl shadow-lg hover:shadow-xl">
-                        <i data-lucide="heart" class="w-4 h-4 mr-2"></i> Donate Now
-                    </a>
                 </div>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
 
-                <div class="md:hidden">
-                    <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-700 hover:text-violet-700 hover:bg-gray-100" onclick="toggleMobileMenu()">
-                        <span class="sr-only">Open main menu</span>
-                        <i data-lucide="menu" class="h-6 w-6" id="menu-icon"></i>
-                    </button>
-                </div>
+            <div class="header-action">
+                <a href="get-involved.html#donate" class="btn btn-primary">
+                    <i data-lucide="heart"></i> Donate Now
+                </a>
+            </div>
+
+            <div class="mobile-toggle">
+                <button onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" id="menu-icon"></i>
+                </button>
             </div>
         </div>
 
-        <div class="absolute top-full w-full bg-white md:hidden transition-all duration-300 ease-in-out max-h-0 overflow-hidden shadow-xl" id="mobile-menu">
-            <div class="pt-2 pb-3 px-4 space-y-2 flex flex-col">
-                <a href="#home" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-violet-50 hover:text-violet-700">Home</a>
-                
-                <button type="button" class="flex justify-between items-center w-full px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-violet-50 hover:text-violet-700" onclick="toggleMobileDropdown()">
-                    About Us
-                    <i data-lucide="chevron-down" class="h-5 w-5 transition-transform" id="mobile-dropdown-icon"></i>
-                </button>
-
-                <div id="mobile-dropdown-content" class="pl-4 space-y-1 overflow-hidden transition-all duration-300 ease-in-out max-h-0">
-                    <a href="#about" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700 font-bold">Who We Are</a>
-                    
-                    <a href="#programs" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Our Programs</a>
-                    <a href="team.html" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Meet the Team</a>
-                    <a href="get-involved.html#volunteer" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Get Involved</a>
-                    <a href="#impact-news" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Impact & News</a>
-                    <a href="#news" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-normal text-gray-600 hover:bg-violet-100 hover:text-violet-700">Blogs & News</a>
-                </div>
-
-                <a href="contact.html" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-violet-50 hover:text-violet-700">Contact</a>
-                
-                <a href="get-involved.html#donate" onclick="closeMobileMenu();" class="btn-primary w-full mt-4 flex items-center justify-center px-4 py-3 text-base font-medium rounded-xl shadow-lg">
-                    <i data-lucide="heart" class="w-5 h-5 mr-2"></i> Donate Now
-                </a>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="index.html" onclick="closeMobileMenu()">Home</a>
+            <button class="mobile-dropdown-btn" onclick="toggleMobileDropdown()">
+                About Us <i data-lucide="chevron-down" id="mobile-dropdown-icon"></i>
+            </button>
+            <div id="mobile-dropdown-content" class="mobile-sub-menu">
+                <a href="#about" onclick="closeMobileMenu()">Who We Are</a>
+                <a href="programs.html" onclick="closeMobileMenu()">Our Programs</a>
+                <a href="team.html" onclick="closeMobileMenu()">Meet the Team</a>
+                <a href="get-involved.html" onclick="closeMobileMenu()">Get Involved</a>
             </div>
+            <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+            <a href="get-involved.html#donate" class="btn btn-primary mobile-donate-btn" onclick="closeMobileMenu()">
+                <i data-lucide="heart"></i> Donate Now
+            </a>
         </div>
     </header>
 
-    <main class="mx-auto">
-
-        <section id="home" class="relative py-32 flex items-center justify-center overflow-hidden">
-            <div class="hero-slider"></div>
-            
-            <div class="relative z-10 text-center max-w-5xl">
-                <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight">
-                    <span class="text-violet-300">Empowering Every Voice.</span> Building Inclusive Futures.
-                </h1>
-                <p class="mt-6 text-xl text-gray-100 max-w-4xl mx-auto">
-                    The Inclusive Care Foundation is dedicated to combating social exclusion, inequality, and discrimination against marginalized groups in Ghana, including **persons with disabilities, the elderly, and children**. We utilize the Community-Based Rehabilitation (CBR) Matrix as a framework to advance inclusive development.
-                </p>
-                <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="get-involved.html#volunteer" class="btn-primary px-8 py-4 text-lg font-semibold rounded-xl shadow-2xl flex items-center justify-center">
-                        <i data-lucide="hand-heart" class="w-5 h-5 mr-2"></i> Become a Volunteer
-                    </a>
-                    <a href="get-involved.html#donate" class="bg-white border border-violet-700 text-violet-700 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:bg-violet-50 transition flex items-center justify-center">
-                        <i data-lucide="heart" class="w-5 h-5 mr-2"></i> Donate Now
-                    </a>
-                    <button onclick="scrollToSection('programs')" class="btn-primary px-8 py-4 text-lg font-semibold rounded-xl shadow-2xl flex items-center justify-center">
-                        <i data-lucide="book-open" class="w-5 h-5 mr-2"></i> Explore Our Programs
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-extrabold text-violet-700">Who We Are</h2>
-                    <p class="text-xl text-gray-600 mt-2">Our Vision, Mission, and the Values that Drive Inclusive Development</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8 text-center p-6 bg-violet-50 rounded-xl shadow-inner">
-                    
-                    <div class="p-4">
-                        <h3 class="text-2xl font-extrabold text-violet-700 mb-2 border-b-2 border-violet-300 pb-1 inline-block">Our Vision</h3>
-                        <p class="text-lg text-gray-700 mt-2">
-                            An all-time available consultancy for community-based rehabilitation services and community development programs.
-                        </p>
-                    </div>
-                    
-                    <div class="p-4 border-t md:border-t-0 md:border-l md:border-r border-violet-300">
-                        <h3 class="text-2xl font-extrabold text-violet-700 mb-2 border-b-2 border-violet-300 pb-1 inline-block">Our Mission</h3>
-                        <p class="text-lg text-gray-700 mt-2">
-                            To advance inclusive development in Ghana, through advocacy, rehabilitation, education, and social/public consultations.
-                        </p>
-                    </div>
-
-                    <div class="p-4 border-t md:border-t-0 border-violet-300">
-                        <h3 class="text-2xl font-extrabold text-violet-700 mb-2 border-b-2 border-violet-300 pb-1 inline-block">Our Core Values</h3>
-                        <p class="text-lg text-gray-700 mt-2 font-semibold">
-                            Diversity; Integrity; Teamwork; Inclusiveness; Equity
+    <main>
+        <section id="home" class="hero-premium">
+            <div class="container hero-inner">
+                <div class="hero-card">
+                    <span class="hero-tag">WELCOME TO INCLUSIVE CARE</span>
+                    <div class="hero-card-content">
+                        <h1>Empowering Every Voice.</h1>
+                        <p>
+                            We are a Ghanaian not-for-profit organisation that provides high quality technical advice, project management, research and implementation support services, using local talent and expertise to enable Ghana's social systems to reach greater heights.
                         </p>
                     </div>
                 </div>
-                
             </div>
         </section>
 
-        <section id="programs" class="py-16 rounded-3xl">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-extrabold text-center text-violet-700 mb-12">Our programs</h2>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    
-                    <div class="program-card bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
-                        <div class="bg-violet-700 h-40 flex items-center justify-center p-4">
-                            <i data-lucide="megaphone" class="w-12 h-12 text-white"></i>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-extrabold text-gray-800 mb-3">Advocacy & Awareness</h3>
-                            <p class="text-gray-600">
-                                Leading advocacy efforts to advance policies and raise public awareness on disability and mental health inclusion.
-                            </p>
-                            <a href="#" onclick="showPlaceholderModal('policyAdvocacy')" class="mt-4 text-violet-700 font-semibold hover:text-violet-900 inline-flex items-center">
-                                Learn More <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="program-card bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
-                        <div class="bg-yellow-500 h-40 flex items-center justify-center p-4">
-                            <i data-lucide="user-check" class="w-12 h-12 text-white"></i>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-extrabold text-gray-800 mb-3">Empowerment & Livelihood</h3>
-                            <p class="text-gray-600">
-                                Providing capacity building for marginalized people and their families to secure their rights, including livelihood empowerment.
-                            </p>
-                            <a href="#" onclick="showPlaceholderModal('capacityBuilding')" class="mt-4 text-yellow-700 font-semibold hover:text-yellow-900 inline-flex items-center">
-                                View Details <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="program-card bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
-                        <div class="bg-teal-600 h-40 flex items-center justify-center p-4">
-                            <i data-lucide="accessibility" class="w-12 h-12 text-white"></i>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-extrabold text-gray-800 mb-3">Rehabilitation & Audits</h3>
-                            <p class="text-gray-600">
-                                Offering direct rehabilitation and conducting public accessibility audits to ensure inclusive environments and social intervention.
-                            </p>
-                            <a href="#" onclick="showPlaceholderModal('rehabilitation')" class="mt-4 text-teal-700 font-semibold hover:text-teal-900 inline-flex items-center">
-                                Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-12 text-center">
-                    <a href="#" onclick="showPlaceholderModal('allPrograms')" class="bg-gray-200 text-gray-700 inline-flex items-center px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:bg-gray-300 transition">
-                        Explore All Our Services <i data-lucide="map" class="w-5 h-5 ml-2"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="get-involved" class="py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-extrabold text-center text-violet-700 mb-12">Get Involved: Be a Champion for Inclusion</h2>
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    
-                    <div class="bg-violet-50 p-8 rounded-xl shadow-xl">
-                        <i data-lucide="users-2" class="w-10 h-10 text-violet-600 mx-auto mb-4"></i>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Volunteer Your Time</h3>
-                        <p class="text-gray-600 mb-4">Contribute your skills to our field operations or administrative support. Every hour helps us reach more people in Peki and beyond.</p>
-                        <a href="get-involved.html#volunteer" class="mt-4 text-violet-700 font-semibold hover:text-violet-900 flex items-center justify-center mx-auto">
-                            Apply to Volunteer <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                        </a>
-                    </div>
-
-                    <div class="bg-violet-50 p-8 rounded-xl shadow-xl">
-                        <i data-lucide="shield-alert" class="w-10 h-10 text-violet-600 mx-auto mb-4"></i>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Amplify Our Advocacy</h3>
-                        <p class="text-gray-600 mb-4">Share our policy guidance and awareness campaigns online to promote mental health and disability inclusion across Ghana.</p>
-                        <button onclick="showPlaceholderModal('advocacyModal')" class="mt-4 text-violet-700 font-semibold hover:text-violet-900 flex items-center justify-center mx-auto">
-                            See Current Campaigns <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                        </button>
-                    </div>
-
-                    <div class="bg-violet-50 p-8 rounded-xl shadow-xl">
-                        <i data-lucide="handshake" class="w-10 h-10 text-violet-600 mx-auto mb-4"></i>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Strategic Partnership</h3>
-                        <p class="text-gray-600 mb-4">We partner with NGOs, government bodies, and businesses to scale our CBR and community development programs.</p>
-                        <a href="contact.html" class="mt-4 text-violet-700 font-semibold hover:text-violet-900 flex items-center justify-center mx-auto">
-                            Propose a Partnership <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                        </a>
-                    </div>
-
-                </div>
-                
-                <div class="mt-12 text-center">
-                    <a href="get-involved.html#donate" class="bg-violet-700 text-white inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl shadow-2xl hover:bg-violet-800 transition">
-                        <i data-lucide="heart" class="w-5 h-5 mr-2"></i> Make a Financial Gift Today
-                    </a>
-                </div>
-            </div>
-        </section>
+        <section id="about" class="section about-premium">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title-premium">Who We Are</h2>
+            <p class="section-subtitle">Driving change through purposeful action and inclusive values.</p>
+        </div>
         
-        <section id="impact-news" class="py-16 rounded-3xl">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="values-flex-grid">
+            <div class="modern-card">
+                <div class="card-glow"></div>
+                <div class="card-icon-wrapper">
+                    <i data-lucide="eye"></i>
+                </div>
+                <h3>Our Vision</h3>
+                <p>An all-time available consultancy for community-based rehabilitation services and community development programs.</p>
+            </div>
 
-                <div class="grid md:grid-cols-2 gap-8 mb-12">
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-blue-400">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <i data-lucide="twitter" class="w-6 h-6 text-blue-400"></i>
-                            <h3 class="text-xl font-bold text-gray-800">Inclusive Care on Twitter</h3>
-                        </div>
-                        <div class="bg-gray-100 p-6 rounded-lg h-56 flex items-center justify-center text-center text-gray-500 border border-gray-300">
-                            <p>Placeholder for Embedded Twitter Timeline/Widget. <br>Follow us for real-time updates! <span class="font-semibold text-violet-700">@InclusiveCareGH</span> (Placeholder Handle)</p>
+            <div class="modern-card highlight-card">
+                <div class="card-glow"></div>
+                <div class="card-icon-wrapper">
+                    <i data-lucide="target"></i>
+                </div>
+                <h3>Our Mission</h3>
+                <p>To advance inclusive development in Ghana, through advocacy, rehabilitation, education, and social consultations.</p>
+            </div>
+
+            <div class="modern-card">
+                <div class="card-glow"></div>
+                <div class="card-icon-wrapper">
+                    <i data-lucide="heart"></i>
+                </div>
+                <h3>Core Values</h3>
+                <ul class="values-list">
+                    <li>Diversity</li>
+                    <li>Integrity</li>
+                    <li>Teamwork</li>
+                    <li>Inclusiveness</li>
+                    <li>Equity</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="programs" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">Our Programs</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon bg-violet"><i data-lucide="megaphone"></i></div>
+                        <div class="card-body">
+                            <h3>Advocacy & Awareness</h3>
+                            <p>Leading advocacy efforts to advance policies and raise public awareness on disability and mental health inclusion.</p>
                         </div>
                     </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-blue-700">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <i data-lucide="facebook" class="w-6 h-6 text-blue-700"></i>
-                            <h3 class="text-xl font-bold text-gray-800">Inclusive Care on Facebook</h3>
+                    <div class="card">
+                        <div class="card-icon bg-yellow"><i data-lucide="user-check"></i></div>
+                        <div class="card-body">
+                            <h3>Empowerment & Livelihood</h3>
+                            <p>Providing capacity building for marginalized people and their families to secure their rights and livelihood.</p>
                         </div>
-                        <div class="bg-gray-100 p-6 rounded-lg h-56 flex items-center justify-center text-center text-gray-500 border border-gray-300">
-                            <p>Placeholder for Embedded Facebook Page Plugin. <br>Like our page for stories and events! <span class="font-semibold text-violet-700">/InclusiveCareFoundation</span> (Placeholder Link)</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon bg-teal"><i data-lucide="accessibility"></i></div>
+                        <div class="card-body">
+                            <h3>Rehabilitation & Audits</h3>
+                            <p>Offering direct rehabilitation and conducting public accessibility audits to ensure inclusive environments.</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="mt-12 text-center">
-                    <button onclick="showPlaceholderModal('fullNews')" class="bg-violet-600 text-white inline-flex items-center px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:bg-violet-700 transition">
-                        View All News & Blogs <i data-lucide="newspaper" class="w-5 h-5 ml-2"></i>
-                    </button>
+                <div class="text-center mt-8">
+                    <a href="programs.html" class="btn btn-secondary">
+                        Explore All Services <i data-lucide="map"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
+        <section id="get-involved" class="section involved-premium">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Become a Partner</h2>
+            <p class="section-subtitle">There are many ways to support inclusive development in Ghana.</p>
+        </div>
+
+        <div class="action-grid">
+            <div class="action-card">
+                <div class="action-icon-box">
+                    <i data-lucide="users-2"></i>
+                </div>
+                <div class="action-content">
+                    <h3>Volunteer Your Time</h3>
+                    <p>Contribute your professional skills to our field operations or administrative support teams.</p>
+                    <a href="get-involved.html#volunteer" class="action-link">
+                        Get Started <i data-lucide="chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <div class="action-icon-box">
+                    <i data-lucide="shield-alert"></i>
+                </div>
+                <div class="action-content">
+                    <h3>Amplify Our Advocacy</h3>
+                    <p>Help us reach more people by sharing our policy guidance and awareness campaigns online.</p>
+                    <a href="#" class="action-link">
+                        View Campaigns <i data-lucide="chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <div class="action-icon-box">
+                    <i data-lucide="handshake"></i>
+                </div>
+                <div class="action-content">
+                    <h3>Strategic Partnership</h3>
+                    <p>We collaborate with NGOs and government bodies to scale our disability inclusion programs.</p>
+                    <a href="contact.html" class="action-link">
+                        Propose Partnership <i data-lucide="chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="get-involved.html" class="btn btn-primary">Get Involved</a>
+        </div>
+    </div>
+</section>
+
+        <section id="impact-news" class="section bg-light">
+            <div class="container">
+                <div class="social-grid">
+                    <div class="social-card border-blue-light">
+                        <div class="social-header">
+                            <i data-lucide="twitter" class="text-blue-light"></i> <h3>Inclusive Care on Twitter</h3>
+                        </div>
+                        <div class="social-body">
+                            <p>Follow us for real-time updates! <br><strong>@InclusiveCareGH</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="social-card border-blue-dark">
+                        <div class="social-header">
+                            <i data-lucide="facebook" class="text-blue-dark"></i> <h3>Facebook Feed</h3>
+                        </div>
+                        <div class="fb-container" style="background: #f0f2f5; border-radius: 8px; overflow: hidden;">
+                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Falex.m.tagbor&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                                width="100%" 
+                                height="450" 
+                                style="border:none;overflow:hidden" 
+                                scrolling="no" 
+                                frameborder="0" 
+                                allowfullscreen="true" 
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="news.html" class="btn btn-primary">View All News & Blogs</a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-gray-100 py-16 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700">
-            
-            <div class="grid md:grid-cols-4 gap-12 border-b border-gray-300 pb-12">
-
-                <div>
-                    <h4 class="text-lg font-extrabold text-violet-700 mb-4">About Us</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#about" class="hover:text-violet-700 transition">Who We Are</a></li>
-                        <li><a href="team.html" class="hover:text-violet-700 transition">Meet Our Team</a></li>
-                        <li><a href="#about" class="hover:text-violet-700 transition">Core Values</a></li>
-                        <li><a href="get-involved.html" class="hover:text-violet-700 transition">Get Involved</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-extrabold text-violet-700 mb-4">Our Work & Resources</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#programs" class="hover:text-violet-700 transition">Our Programs (CBR Matrix)</a></li>
-                        <li><a href="#" onclick="showPlaceholderModal('research')" class="hover:text-violet-700 transition">Disability Research</a></li>
-                        <li><a href="#" onclick="showPlaceholderModal('publications')" class="hover:text-violet-700 transition">Publications</a></li>
-                        <li><a href="#impact-news" class="hover:text-violet-700 transition">Blogs & News</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-extrabold text-violet-700 mb-4">Contact Us</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li class="flex items-start">
-                            <i data-lucide="mail" class="w-4 h-4 mr-2 mt-1 text-gray-500 flex-shrink-0"></i>
-                            <a href="mailto:inclusivefoundation.gh@gmail.com" class="hover:text-violet-700 transition">inclusivefoundation.gh@gmail.com</a>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-lucide="phone" class="w-4 h-4 mr-2 mt-1 text-gray-500 flex-shrink-0"></i>
-                            <span>0247835726 / 0207987405</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-1 text-gray-500 flex-shrink-0"></i>
-                            <span>Headquarters: Peki, Volta Region, Ghana</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-lucide="compass" class="w-4 h-4 mr-2 mt-1 text-gray-500 flex-shrink-0"></i>
-                            <span>Digital Address: VQ-0000-0000 (Peki)</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-extrabold text-violet-700 mb-4">Connect With Us</h4>
-                    
-                    <div class="flex space-x-3 mb-6">
-                        <a href="#" title="Facebook" class="text-gray-500 hover:text-blue-600 transition"><i data-lucide="facebook" class="w-6 h-6"></i></a>
-                        <a href="#" title="Twitter" class="text-gray-500 hover:text-blue-400 transition"><i data-lucide="twitter" class="w-6 h-6"></i></a>
-                        <a href="#" title="Instagram" class="text-gray-500 hover:text-pink-600 transition"><i data-lucide="instagram" class="w-6 h-6"></i></a>
-                        <a href="#" title="LinkedIn" class="text-gray-500 hover:text-blue-700 transition"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
-                    </div>
-                    
-                    <a href="get-involved.html#donate" class="btn-primary inline-flex items-center px-6 py-3 text-sm font-semibold rounded-xl shadow-lg hover:shadow-xl w-full justify-center">
-                         <i data-lucide="heart" class="w-4 h-4 mr-2"></i> Donate Now
-                    </a>
-                    <p class="text-xs text-gray-500 mt-2">Support our fight against social exclusion.</p>
-                </div>
-
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#about">Who We Are</a></li>
+                    <li><a href="team.html">Meet Our Team</a></li>
+                    <li><a href="get-involved.html">Get Involved</a></li>
+                </ul>
             </div>
-
-            <div class="mt-8 text-center text-sm text-gray-600">
-                <p>&copy; 2025 Inclusive Care Foundation. All Rights Reserved. Duly registered in Ghana.</p>
-                <div class="mt-2 flex justify-center space-x-4 text-xs">
-                    </div>
+            <div>
+                <h4>Work & Resources</h4>
+                <ul>
+                    <li><a href="#programs">Our Programs</a></li>
+                    <li><a href="#" onclick="showPlaceholderModal('research')">Research</a></li>
+                    <li><a href="#" onclick="showPlaceholderModal('publications')">Publications</a></li>
+                </ul>
             </div>
-
+            <div>
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i data-lucide="mail"></i> inclusivefoundation.gh@gmail.com</li>
+                    <li><i data-lucide="phone"></i> 0247835726 / 0207987405</li>
+                    <li><i data-lucide="map-pin"></i> Peki, Volta Region, Ghana</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#"><i data-lucide="facebook"></i></a>
+                    <a href="#"><i data-lucide="twitter"></i></a>
+                    <a href="#"><i data-lucide="instagram"></i></a>
+                    <a href="#"><i data-lucide="linkedin"></i></a>
+                </div>
+                <a href="get-involved.html#donate" class="btn btn-primary full-width">Donate Now</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Inclusive Care Foundation. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <div id="messageModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center z-[999]">
-        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full transform opacity-0" id="modalContent">
-            <h3 class="text-2xl font-bold text-violet-700 mb-4" id="modalTitle"></h3>
-            <p class="text-gray-700 mb-6" id="modalBody"></p>
-            <button class="btn-primary w-full px-4 py-2 rounded-xl" onclick="closeModal()">OK</button>
+    <div id="messageModal" class="modal hidden">
+        <div class="modal-content" id="modalContent">
+            <h3 id="modalTitle"></h3>
+            <p id="modalBody"></p>
+            <button class="btn btn-primary full-width" onclick="closeModal()">OK</button>
         </div>
     </div>
 
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>

@@ -1,0 +1,131 @@
+/* --- T-TEL CONTACT LAYOUT --- */
+
+.ttel-hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero-bg.jpg'); /* Use your high-res community photo */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 160px;
+    color: white;
+}
+
+.hero-inner-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.hero-text-side h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero-text-side p {
+    max-width: 500px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* The Floating Box */
+.ttel-floating-card {
+    background: white;
+    width: 440px;
+    padding: 50px 40px 40px;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+    margin-bottom: -280px; /* This makes it overlap the white section below */
+    z-index: 10;
+}
+
+.card-tag-teal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00a99d; /* T-TEL Teal */
+    color: white;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.info-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 22px;
+    color: #444;
+}
+
+.info-row i {
+    color: #a32a29; /* Deep Red Icon Color */
+    width: 20px;
+    margin-top: 3px;
+}
+
+.card-socials {
+    margin-top: 35px;
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+}
+
+.card-socials h4 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.social-icons-row {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-row a { color: #888; transition: 0.3s; }
+.social-icons-row a:hover { color: #00a99d; }
+
+/* Lower Section */
+.contact-lower-section {
+    padding: 120px 0 80px;
+    background: #fff;
+}
+
+.lower-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.form-heading {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #00a99d;
+    display: inline-block;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.modern-contact-form input, 
+.modern-contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.map-frame {
+    height: 400px;
+    background: #f4f4f4;
+    border: 1px solid #eee;
+}
+
+/* Responsive Fix */
+@media (max-width: 992px) {
+    .hero-inner-flex, .lower-grid-layout { flex-direction: column; grid-template-columns: 1fr; }
+    .ttel-floating-card { width: 100%; margin-bottom: 20px; margin-top: 40px; }
+    .hero-text-side h1 { font-size: 2.5rem; }
+}

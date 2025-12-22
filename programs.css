@@ -1,0 +1,123 @@
+/* --- Programs Page Specifics --- */
+
+.programs-hero {
+    background-color: #6d28d9; /* Deep Violet */
+    color: white;
+    padding: 100px 0;
+    text-align: left;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 700px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Pillars Grid */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.pillar-card {
+    padding: 40px 30px;
+    text-align: center;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #f3f4f6;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.pillar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #ddd6fe;
+}
+
+.pillar-icon {
+    width: 48px;
+    height: 48px;
+    color: #7c3aed;
+    margin: 0 auto 20px;
+}
+
+.pillar-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #1f2937;
+}
+
+.pillar-card p {
+    font-size: 0.95rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Detailed Stack */
+.details-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.detail-item {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    border-left: 6px solid #6d28d9;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.detail-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.detail-header i {
+    color: #6d28d9;
+    width: 32px;
+    height: 32px;
+}
+
+.detail-header h3 {
+    font-size: 1.5rem;
+    color: #111827;
+    font-weight: 700;
+}
+
+.detail-item p {
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+/* Investment CTA */
+.investment-cta {
+    background-color: #f5f3ff;
+    background-image: linear-gradient(135deg, #6d28d9 0%, #4c1d95 100%);
+    padding: 80px 0;
+}
+
+.btn-large {
+    padding: 16px 40px;
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.5rem; }
+    .detail-item { padding: 25px; }
+}
