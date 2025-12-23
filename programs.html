@@ -24,13 +24,14 @@
             <nav class="desktop-nav">
                 <a href="index.html" class="nav-link">Home</a>
                 <div class="dropdown">
-                    <a href="index.html#about" class="nav-link dropdown-trigger">About Us <i data-lucide="chevron-down" class="icon-sm"></i></a>
+                    <a href="#about" class="nav-link dropdown-trigger">About Us <i data-lucide="chevron-down" class="icon-sm"></i></a>
                     <div class="dropdown-menu">
-                        <a href="index.html#about">Who We Are</a>
-                        <a href="programs.html" class="active">Our Programs</a>
+                        <a href="#about">Who We Are</a>
+                        <a href="programs.html">Our Programs</a>
                         <a href="team.html">Meet the Team</a>
-                        <a href="index.html#impact-news">Impact & News</a>
+                        <a href="impact.html">Impacts & updates</a>
                         <a href="get-involved.html">Get Involved</a>
+                        <a href="news.html">Blogs & News</a>
                     </div>
                 </div>
                 <a href="contact.html" class="nav-link">Contact</a>
@@ -48,7 +49,26 @@
                 </button>
             </div>
         </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="index.html" onclick="closeMobileMenu()">Home</a>
+            <button class="mobile-dropdown-btn" onclick="toggleMobileDropdown()">
+                About Us <i data-lucide="chevron-down" id="mobile-dropdown-icon"></i>
+            </button>
+            <div id="mobile-dropdown-content" class="mobile-sub-menu">
+                <a href="#about" onclick="closeMobileMenu()">Who We Are</a>
+                <a href="programs.html" onclick="closeMobileMenu()">Our Programs</a>
+                <a href="team.html" onclick="closeMobileMenu()">Meet the Team</a>
+                <a href="impact.html" onclick="closeMobileMenu()">Impacts & updates</a>
+                <a href="get-involved.html" onclick="closeMobileMenu()">Get Involved</a>
+            </div>
+            <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+            <a href="get-involved.html#donate" class="btn btn-primary mobile-donate-btn" onclick="closeMobileMenu()">
+                <i data-lucide="heart"></i> Donate Now
+            </a>
+        </div>
     </header>
+
 
     <main>
         <section class="programs-hero">
@@ -67,22 +87,22 @@
                     <div class="pillar-card">
                         <i data-lucide="megaphone" class="pillar-icon"></i>
                         <h3>Advocacy & Awareness</h3>
-                        <p>Challenging stigma and pushing for inclusive policy changes.</p>
+                        <p>We drive public campaigns and media outreach to change negative perceptions and challenge deep-rooted stigma against marginalized groups. Our advocacy focuses on influencing government and corporate policy to ensure the rights enshrined in the Disability Act are fully implemented.</p>
                     </div>
                     <div class="pillar-card">
                         <i data-lucide="hand-heart" class="pillar-icon"></i>
                         <h3>Empowerment & Capacity</h3>
-                        <p>Building skills for self-advocacy and economic independence.</p>
+                        <p>This involves training sessions focused on self-advocacy, leadership, and vocational skills. We aim to equip individuals with the knowledge and confidence necessary to participate actively in community and economic life.</p>
                     </div>
                     <div class="pillar-card">
                         <i data-lucide="users" class="pillar-icon"></i>
                         <h3>Public Consultations</h3>
-                        <p>Engaging stakeholders for inclusive community planning.</p>
+                        <p>We facilitate dialogue between marginalized groups, local authorities, policymakers, and community leaders. These consultations ensure that development plans are informed by lived experiences.</p>
                     </div>
                     <div class="pillar-card">
                         <i data-lucide="heart-pulse" class="pillar-icon"></i>
                         <h3>Rehabilitation & Support</h3>
-                        <p>Providing physical, vocational, and psychosocial rehabilitation.</p>
+                        <p>We provide direct support including physical therapy, psychosocial counseling, educational integration support, and vocational guidance to help individuals maximize their social functioning.</p>
                     </div>
                     <div class="pillar-card">
                         <i data-lucide="laptop-2" class="pillar-icon"></i>
@@ -108,45 +128,7 @@
             </div>
         </section>
 
-        <section class="section bg-light">
-            <div class="container">
-                <h2 class="section-title text-center">In-Depth Look at Our Services</h2>
-                <div class="details-stack">
-                    <div class="detail-item">
-                        <div class="detail-header">
-                            <i data-lucide="megaphone"></i>
-                            <h3>1. Advocacy and Awareness</h3>
-                        </div>
-                        <p>We drive public campaigns and media outreach to change negative perceptions and challenge deep-rooted stigma against marginalized groups. Our advocacy focuses on influencing government and corporate policy to ensure the rights enshrined in the Disability Act are fully implemented.</p>
-                    </div>
-
-                    <div class="detail-item">
-                        <div class="detail-header">
-                            <i data-lucide="hand-heart"></i>
-                            <h3>2. Empowerment & Capacity Building</h3>
-                        </div>
-                        <p>This involves training sessions focused on self-advocacy, leadership, and vocational skills. We aim to equip individuals with the knowledge and confidence necessary to participate actively in community and economic life.</p>
-                    </div>
-
-                    <div class="detail-item">
-                        <div class="detail-header">
-                            <i data-lucide="users"></i>
-                            <h3>3. Public Consultations</h3>
-                        </div>
-                        <p>We facilitate dialogue between marginalized groups, local authorities, policymakers, and community leaders. These consultations ensure that development plans are informed by lived experiences.</p>
-                    </div>
-
-                    <div class="detail-item">
-                        <div class="detail-header">
-                            <i data-lucide="heart-pulse"></i>
-                            <h3>4. Rehabilitation & Support Services</h3>
-                        </div>
-                        <p>We provide direct support including physical therapy, psychosocial counseling, educational integration support, and vocational guidance to help individuals maximize their social functioning.</p>
-                    </div>
-
-                    </div>
-            </div>
-        </section>
+        
 
         <section class="section investment-cta">
             <div class="container text-center">
@@ -162,10 +144,26 @@
     <footer>
         <div class="container footer-grid">
             <div>
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#about">Who We Are</a></li>
+                    <li><a href="team.html">Meet Our Team</a></li>
+                    <li><a href="get-involved.html">Get Involved</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Work & Resources</h4>
+                <ul>
+                    <li><a href="#programs">Our Programs</a></li>
+                    <li><a href="#" onclick="showPlaceholderModal('research')">Research</a></li>
+                    <li><a href="#" onclick="showPlaceholderModal('publications')">Publications</a></li>
+                </ul>
+            </div>
+            <div>
                 <h4>Contact Us</h4>
                 <ul>
                     <li><i data-lucide="mail"></i> inclusivefoundation.gh@gmail.com</li>
-                    <li><i data-lucide="phone"></i> 0247835726</li>
+                    <li><i data-lucide="phone"></i> 0247835726 / 0207987405</li>
                     <li><i data-lucide="map-pin"></i> Peki, Volta Region, Ghana</li>
                 </ul>
             </div>
@@ -174,8 +172,10 @@
                 <div class="social-icons">
                     <a href="#"><i data-lucide="facebook"></i></a>
                     <a href="#"><i data-lucide="twitter"></i></a>
+                    <a href="#"><i data-lucide="instagram"></i></a>
                     <a href="#"><i data-lucide="linkedin"></i></a>
                 </div>
+                <a href="get-involved.html#donate" class="btn btn-primary full-width">Donate Now</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -183,6 +183,16 @@
         </div>
     </footer>
 
-    <script>lucide.createIcons();</script>
+    <div id="messageModal" class="modal hidden">
+        <div class="modal-content" id="modalContent">
+            <h3 id="modalTitle"></h3>
+            <p id="modalBody"></p>
+            <button class="btn btn-primary full-width" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>

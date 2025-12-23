@@ -23,8 +23,8 @@
 /* Pillars Grid */
 .pillars-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
     margin-top: 50px;
 }
 
@@ -76,7 +76,7 @@
     background: white;
     padding: 40px;
     border-radius: 16px;
-    border-left: 6px solid #6d28d9;
+    border-left: 6px solid #f5f3f8;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
@@ -107,13 +107,14 @@
 /* Investment CTA */
 .investment-cta {
     background-color: #f5f3ff;
-    background-image: linear-gradient(135deg, #6d28d9 0%, #4c1d95 100%);
-    padding: 80px 0;
+    background-image: linear-gradient(135deg, #f6f5f7 0%, #f6f5f8 100%);
+    padding: 30px 0;
 }
 
 .btn-large {
     padding: 16px 40px;
     font-size: 1.1rem;
+    margin-top: 50px;
 }
 
 /* Responsive */

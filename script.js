@@ -25,14 +25,27 @@ function closeMobileMenu() {
 function toggleMobileDropdown() {
     const content = document.getElementById('mobile-dropdown-content');
     const icon = document.getElementById('mobile-dropdown-icon');
+    const menu = document.getElementById('mobile-menu'); // The parent container
 
     content.classList.toggle('open');
+    
     if (content.classList.contains('open')) {
         content.style.maxHeight = content.scrollHeight + "px";
         icon.style.transform = "rotate(180deg)";
+        
+        // ADD THIS: Update the parent menu height to include the new dropdown space
+        if (menu.classList.contains('active')) {
+            menu.style.maxHeight = (menu.scrollHeight + content.scrollHeight) + "px";
+        }
     } else {
+        // When closing, subtract the height or reset to the main menu's scrollHeight
         content.style.maxHeight = "0";
         icon.style.transform = "rotate(0deg)";
+        
+        // Reset parent to its natural height
+        setTimeout(() => {
+            menu.style.maxHeight = menu.scrollHeight + "px";
+        }, 300); // Wait for child transition to finish
     }
 }
 
@@ -69,51 +82,4 @@ window.onclick = function(event) {
     if (event.target === modal) {
         closeModal();
     }
-}
-
-
-
-
-
-/*====== SIGNUP FOR PAYMENT MODAL ======*/
-let currentMode = 'signup';
-
-function showAuth(mode) {
-    currentMode = mode;
-    const title = document.getElementById('formTitle');
-    const nameGroup = document.getElementById('nameGroup');
-    const btn = document.querySelector('.submit-donation');
-    
-    // Toggle active classes
-    document.getElementById('signupToggle').classList.toggle('active', mode === 'signup');
-    document.getElementById('loginToggle').classList.toggle('active', mode === 'login');
-
-    if (mode === 'login') {
-        title.innerText = "Login to Your Account";
-        nameGroup.style.display = 'none';
-        btn.innerHTML = 'Login & Donate <i data-lucide="arrow-right"></i>';
-    } else {
-        title.innerText = "Create Your Account";
-        nameGroup.style.display = 'block';
-        btn.innerHTML = 'Sign Up & Donate <i data-lucide="arrow-right"></i>';
-    }
-    lucide.createIcons();
-}
-
-function handleDonationFlow() {
-    const email = document.getElementById('donorEmail').value;
-    const amount = document.getElementById('otherAmount').value;
-
-    if (!email) {
-        alert("Please enter your email to continue.");
-        return;
-    }
-    if (!amount || amount <= 0) {
-        alert("Please select a donation amount.");
-        return;
-    }
-
-    // Success logic
-    const action = currentMode === 'signup' ? "creating your account" : "logging you in";
-    alert(`Success! We are ${action} and redirecting you to pay GHS ${amount}. Your receipt will be sent to ${email}.`);
 }
