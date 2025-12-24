@@ -678,8 +678,9 @@ img { max-width: 100%; display: block; }
 /* Social Cards */
 .social-grid {
     display: grid;
-    gap: 2rem;
+    gap: 10rem;
     grid-template-columns: 1fr;
+    width: 500px;
 }
 @media (min-width: 768px) { .social-grid { grid-template-columns: 1fr 1fr; } }
 
