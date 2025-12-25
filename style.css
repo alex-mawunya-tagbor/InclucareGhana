@@ -479,6 +479,20 @@ img { max-width: 100%; display: block; }
     background: #f9f9f9;
 }
 
+.social-icons a {
+    color: #6f6f72;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1da1f2;
+}
+
+.x-icon svg {
+    vertical-align: middle;
+}
+
+
 /* Responsive Fix */
 @media (max-width: 768px) {
     .donation-cta-box {
