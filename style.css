@@ -708,13 +708,13 @@ img { max-width: 100%; display: block; }
 .social-grid {
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(2, 400px);
+    grid-template-columns: repeat(2, 380px);
     justify-content: center;
 }
 
 @media (max-width: 768px) {
     .social-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 380px;
         justify-content: center;
     }
 }
