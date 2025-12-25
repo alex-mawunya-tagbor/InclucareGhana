@@ -25,29 +25,40 @@ function closeMobileMenu() {
 function toggleMobileDropdown() {
     const content = document.getElementById('mobile-dropdown-content');
     const icon = document.getElementById('mobile-dropdown-icon');
-    const menu = document.getElementById('mobile-menu'); // The parent container
+    const menu = document.getElementById('mobile-menu');
 
     content.classList.toggle('open');
-    
+
     if (content.classList.contains('open')) {
         content.style.maxHeight = content.scrollHeight + "px";
         icon.style.transform = "rotate(180deg)";
-        
-        // ADD THIS: Update the parent menu height to include the new dropdown space
-        if (menu.classList.contains('active')) {
-            menu.style.maxHeight = (menu.scrollHeight + content.scrollHeight) + "px";
+
+        // FIX: use .open instead of .active
+        if (menu.classList.contains('open')) {
+            menu.style.maxHeight = menu.scrollHeight + content.scrollHeight + "px";
         }
     } else {
-        // When closing, subtract the height or reset to the main menu's scrollHeight
         content.style.maxHeight = "0";
         icon.style.transform = "rotate(0deg)";
-        
-        // Reset parent to its natural height
+
         setTimeout(() => {
             menu.style.maxHeight = menu.scrollHeight + "px";
-        }, 300); // Wait for child transition to finish
+        }, 300);
     }
 }
+
+function toggleMobileMenu() {
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("open");
+
+    if (menu.classList.contains("open")) {
+        menu.style.maxHeight = menu.scrollHeight + "px";
+    } else {
+        menu.style.maxHeight = "0";
+    }
+}
+
+
 
 // Modal Logic
 function showPlaceholderModal(type) {
