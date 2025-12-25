@@ -94,7 +94,11 @@
                 </div>
 
                 <div class="card-form-box">
-                    <form action="https://formspree.io/f/meejynaw" class="vol-form">
+                    <form 
+                        id="enquiryForm"
+                        action="https://formspree.io/f/meejynaw" 
+                        method="post" 
+                        class="vol-form">
                         <h3>Apply Today</h3>
                         <div class="form-group">
                             <label>Full Name</label>
@@ -234,6 +238,14 @@
             <p>&copy; 2025 Inclusive Care Foundation. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- Popup HTML Modal For Formspree -->
+    <div id="formPopup" class="form-popup">
+        <div class="popup-content">
+            <p id="popupMessage"></p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
 
     <script>lucide.createIcons();</script>
 </body>

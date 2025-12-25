@@ -129,14 +129,21 @@
             <div class="container lower-grid-layout">
                 <div class="enquiry-form-wrapper">
                     <h3 class="form-heading">Enquiry Form</h3>
-                    <form action="https://formspree.io/f/meejynaw" class="modern-contact-form">
-                        <div class="input-row">
-                            <input type="text" placeholder="Full Name" required>
-                            <input type="email" placeholder="Email Address" required>
-                        </div>
-                        <textarea placeholder="Your Message" rows="6" required></textarea>
-                        <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
-                    </form>
+                    <form id="enquiryForm"
+      action="https://formspree.io/f/meejynaw"
+      method="POST"
+      class="modern-contact-form">
+
+    <div class="input-row">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+    </div>
+
+    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+
+    <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+</form>
+
                 </div>
                 
                 <div class="map-frame">
@@ -208,8 +215,19 @@
         </div>
     </footer>
 
+
+    <!-- Popup HTML Modal For Formspree -->
+    <div id="formPopup" class="form-popup">
+        <div class="popup-content">
+            <p id="popupMessage"></p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
     <script>
         lucide.createIcons();
     </script>
+</div>
+
 </body>
 </html>

@@ -94,3 +94,41 @@ window.onclick = function(event) {
         closeModal();
     }
 }
+
+//This stops Formspree redirect
+
+const form = document.getElementById("enquiryForm");
+const popup = document.getElementById("formPopup");
+const popupMessage = document.getElementById("popupMessage");
+
+form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // 🚫 stop redirect
+
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            popupMessage.textContent = "✅ Submitted successfully!";
+            form.reset();
+        } else {
+            popupMessage.textContent = "❌ Submission failed. Please try again.";
+        }
+
+    } catch (error) {
+        popupMessage.textContent = "⚠️ Network error. Please try again later.";
+    }
+
+    popup.style.display = "flex";
+});
+
+function closePopup() {
+    popup.style.display = "none";
+}
