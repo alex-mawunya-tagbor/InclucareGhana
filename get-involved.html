@@ -95,30 +95,38 @@
 
                 <div class="card-form-box">
                     <form 
-                        id="enquiryForm"
+                        id="volunteerForm"
                         action="https://formspree.io/f/meejynaw" 
-                        method="post" 
+                        method="POST" 
                         class="vol-form">
+
                         <h3>Apply Today</h3>
+
                         <div class="form-group">
                             <label>Full Name</label>
-                            <input type="text" placeholder="Full name">
+                            <input type="text" name="fullName" placeholder="Full name" required>
                         </div>
+
                         <div class="form-group">
                             <label>Email Address</label>
-                            <input type="email" placeholder="Email address">
+                            <input type="email" name="email" placeholder="Email address" required>
                         </div>
+
                         <div class="form-group">
                             <label>Area of Interest</label>
-                            <select>
-                                <option>Select an area</option>
-                                <option>CBR</option>
-                                <option>Advocacy</option>
-                                <option>General Support</option>
+                            <select name="interest" required>
+                                <option value="">Select an area</option>
+                                <option value="CBR">CBR</option>
+                                <option value="Advocacy">Advocacy</option>
+                                <option value="General Support">General Support</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary full-width">Submit Volunteer Application</button>
+
+                        <button type="submit" class="btn btn-primary full-width">
+                            Submit Volunteer Application
+                        </button>
                     </form>
+
                 </div>
             </div>
         </section>
@@ -240,12 +248,14 @@
     </footer>
 
     <!-- Popup HTML Modal For Formspree -->
+
     <div id="formPopup" class="form-popup">
         <div class="popup-content">
             <p id="popupMessage"></p>
             <button onclick="closePopup()">OK</button>
         </div>
     </div>
+
 
     <script>lucide.createIcons();</script>
 </body>

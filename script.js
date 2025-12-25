@@ -96,39 +96,48 @@ window.onclick = function(event) {
 }
 
 //This stops Formspree redirect
+//Contact Form Submission Handling
 
-const form = document.getElementById("enquiryForm");
-const popup = document.getElementById("formPopup");
-const popupMessage = document.getElementById("popupMessage");
+setupForm("contactForm");
+setupForm("volunteerForm");
 
-form.addEventListener("submit", async function (e) {
-    e.preventDefault(); // 🚫 stop redirect
+function setupForm(formId) {
+    const form = document.getElementById(formId);
+    const popup = document.getElementById("formPopup");
+    const popupMessage = document.getElementById("popupMessage");
+    if (!form) return;
 
-    const formData = new FormData(form);
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
 
-    try {
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                popupMessage.textContent = "✅ Submitted successfully!";
+                form.reset();
+            } else {
+                popupMessage.textContent = "❌ Submission failed. Please try again.";
             }
-        });
 
-        if (response.ok) {
-            popupMessage.textContent = "✅ Submitted successfully!";
-            form.reset();
-        } else {
-            popupMessage.textContent = "❌ Submission failed. Please try again.";
+        } catch (error) {
+            popupMessage.textContent = "⚠️ Network error. Please try again later.";
         }
 
-    } catch (error) {
-        popupMessage.textContent = "⚠️ Network error. Please try again later.";
-    }
+        popup.style.display = "flex";
+    });
+}
 
-    popup.style.display = "flex";
-});
-
+// Make this **global**, so the button can access it
 function closePopup() {
+    const popup = document.getElementById("formPopup");
     popup.style.display = "none";
 }
